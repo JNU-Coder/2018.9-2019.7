@@ -1,0 +1,60 @@
+#include<stdio.h>
+#include<stdio.h>
+int main(void)
+{
+	int	i,j,sum,temp,r1,r2,a,b;
+	for(i=0;;i++)
+		{
+			for(j=0;;j++)
+			{
+			r1=rand();
+			r2=rand();
+			if(i==0)
+		{
+			if(r1>0&&r1<7)
+				if(r2>0&&r2<7)
+				{
+					a=r1;
+					b=r2;
+				}
+			sum=a+b;
+			if(sum==7||sum==11)
+			{
+				printf("win\n");
+				break;
+			}
+			else if(sum==2||sum==3||sum==12)
+			{
+				printf("defeat\n");
+				break;
+			}
+			else  {
+				temp=sum;
+				break;
+			}
+		}
+		if(sum==7||sum==11){
+			break;
+		}
+			if(i!=0)
+		{
+			if(r1>0&&r1<7)
+				if(r2>0&&r2<7)
+				{
+					a=r1;
+					b=r2;
+				}
+			sum=a+b;
+			if(sum==temp)
+			{
+				printf("win\n");
+				break;
+			}
+		}
+		if(temp==sum){
+			break;
+		}
+	}
+}
+	return 0;
+} 
